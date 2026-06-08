@@ -36,9 +36,8 @@ To build this project, you will need:
 * **LED 4:** Connected to Arduino **Digital Pin 5** (via 220Ω resistor)
 * **GND:** All LED cathodes connected to Arduino **GND**
 
-💻 Software Installation & Configuration
 
-💻 Software Installation & Configuration
+## 💻 Software Installation & Configuration
 
 ### Prerequisites
 Ensure you have Python 3.8+ and the Arduino IDE installed.
@@ -67,7 +66,7 @@ Python
 arduino = serial.Serial('COM3', 9600, timeout=1) 
 
 # Example for Linux/Mac:
-# arduino = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+ arduino = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
 
 How to Run
 Ensure your Arduino is plugged into the USB port.
