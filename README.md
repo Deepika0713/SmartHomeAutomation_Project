@@ -62,10 +62,10 @@ pip install -r requirements.txt
 Open 4_leds.py and modify the serial port initialization line to match your Arduino's port:
 
 Python
-# Example for Windows:
+### Example for Windows:
 arduino = serial.Serial('COM3', 9600, timeout=1) 
 
-# Example for Linux/Mac:
+### Example for Linux/Mac:
  arduino = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
 
 How to Run
