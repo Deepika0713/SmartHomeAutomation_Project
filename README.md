@@ -35,3 +35,70 @@ To build this project, you will need:
 * **LED 3:** Connected to Arduino **Digital Pin 4** (via 220Ω resistor)
 * **LED 4:** Connected to Arduino **Digital Pin 5** (via 220Ω resistor)
 * **GND:** All LED cathodes connected to Arduino **GND**
+
+💻 Software Installation & Configuration
+
+💻 Software Installation & Configuration
+
+### Prerequisites
+Ensure you have Python 3.8+ and the Arduino IDE installed.
+
+### 1. Arduino Setup
+1. Open the Arduino IDE.
+2. Open the file `sketch_4_leds.ino`.
+3. Connect your Arduino board to your computer.
+4. Select the correct **Board** and **Port** from the *Tools* menu.
+5. Click **Upload**.
+6. *Note the COM Port number (e.g., COM3 on Windows or /dev/ttyACM0 on Linux/macOS).*
+
+### 2. Python Setup
+1. Clone this repository to your local machine:
+   ```bash
+   git clone [https://github.com/Deepika0713/SmartHomeAutomation_Project.git](https://github.com/Deepika0713/SmartHomeAutomation_Project.git)
+   cd SmartHomeAutomation_Project
+Install the required libraries:
+
+Bash
+pip install -r requirements.txt
+Open 4_leds.py and modify the serial port initialization line to match your Arduino's port:
+
+Python
+# Example for Windows:
+arduino = serial.Serial('COM3', 9600, timeout=1) 
+
+# Example for Linux/Mac:
+# arduino = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+
+How to Run
+Ensure your Arduino is plugged into the USB port.
+
+Run the Python application:
+
+Bash
+python 4_leds.py
+A window showing your webcam feed will open.
+
+Hold your hand up to the camera to begin controlling the LEDs:
+
+Gesture Examples (Standard configuration):
+
+1 Finger Extended ➡️ Toggle/Turn on Light 1
+
+2 Fingers Extended ➡️ Toggle/Turn on Light 2
+
+3 Fingers Extended ➡️ Toggle/Turn on Light 3
+
+4 Fingers Extended ➡️ Toggle/Turn on Light 4
+
+Open Palm (5) or Fist (0) ➡️ Master command (All ON / All OFF depending on code setup)
+
+Press q while focusing on the camera window to safely exit the application and close the serial stream.
+
+✨ Future Enhancements
+Integration with physical relay modules to control real 230V household appliances.
+
+Adding voice control overlay alongside gesture recognition.
+
+Developing a lightweight GUI dashboard to monitor live device states.
+
+
